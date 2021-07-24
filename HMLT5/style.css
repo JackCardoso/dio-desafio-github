@@ -1,18 +1,21 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    border: 1px solid red;
 }
 .main-container{
     display: grid;
-    grid-template-areas: "header header header header header"
-                         "nav nav main main main"
-                         "footer footer footer footer footer";
+    grid-template-columns: 12% auto auto;
+    grid-template-areas: "header header header"
+                         "nav main main"
+                         "footer footer footer";
 
 }
 header{
     grid-area: header;
     width: 100%;
-    height: 20vh;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +45,7 @@ nav > ul > li:last-child{
 main{
     grid-area: main;
     min-height: 100vh;
+    padding: 10px;
 }
 footer{
     grid-area: footer;
